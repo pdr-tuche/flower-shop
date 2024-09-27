@@ -1,10 +1,26 @@
-body {
-  margin: 0;
-}
 
-section {
+.home-section {
   background-image: url(../../public/images/annie-spratt-vJLQBep1oaY-unsplash\ 1.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 1024px;
+  min-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 1024px;
+}
+
+.title {
+  color: #DFDFDF;
+  font-weight: 500;
+  font-size: 203px;
+  line-height: 276.49px;
+  text-align: center;
+  margin-top: 374px;
 }
