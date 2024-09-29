@@ -1,0 +1,21 @@
+app-header {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  color: #DFDFDF;
+  font-weight: 500;
+  font-size: 203px;
+  line-height: 276.49px;
+  text-align: center;
+  margin-top: 374px;
+  margin-bottom: 374px;
+}
+
+.background {
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 1440px;
+  min-height: 1024px;
+}

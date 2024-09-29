@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './shared/components/header/header.component';
-import { CommonModule } from '@angular/common';
+import { AboutUsComponent } from "./features/sections/about-us/about-us.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, HeaderComponent],
+  imports: [RouterOutlet, AboutUsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'Flower Shop';
-  background = 'images/annie-spratt-home.png';
+  title = 'flower-shop';
 }
