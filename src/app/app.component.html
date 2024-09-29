@@ -1,1 +1,4 @@
-<app-home-section></app-home-section>
+<div class="background" [ngStyle]="{ backgroundImage: 'url(' + background +')' }">
+  <app-header></app-header>
+  <h1 class="title" [title]="title"> {{ title }}</h1>
+</div>

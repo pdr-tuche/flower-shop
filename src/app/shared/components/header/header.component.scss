@@ -1,11 +1,26 @@
 .header-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  max-width: 1164px;
   min-width: 1024px;
   height: 85px;
-  margin-top: 36px;
+  padding-top: 36px;
+}
+
+.left-content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 50%;
+  margin-left: 20px;
+}
+
+.right-content {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 50%;
+  margin-right: 20px;
 }
 
 .header-content a {
@@ -15,4 +30,8 @@
   font-weight: 400;
   font-size: 28px;
   text-align: center;
+}
+
+.spacer{
+  width: 20px;
 }
