@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../public/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Yeseva One';
+  src: url('../public/fonts/Yeseva_One/YesevaOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('../public/fonts/Noto_Serif/NotoSerif-VariableFont_wdth\,wght.ttf');
+}
+
 body, h1 {
   margin: 0;
 }
