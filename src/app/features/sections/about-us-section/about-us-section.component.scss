@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  min-width: 1440px;
+  min-height: 1024;
+}
+
+.image-container {
+  height: 100%;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 83px;
+  height: 79px;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: 'Yeseva One', serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 55.44px;
+  text-align: center;
+  margin: 32px 32px;
+}
+
+.text {
+  font-family: 'Roboto Light', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23.44px;
+  text-align: justify;
+  width: 50%;
+  margin: 0 auto;
+}
+
+

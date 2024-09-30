@@ -1,6 +1,11 @@
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Roboto Regular';
   src: url('../public/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('../public/fonts/Roboto/Roboto-Light.ttf') format('truetype');
 }
 
 @font-face {
@@ -10,7 +15,7 @@
 
 @font-face {
   font-family: 'Noto Serif';
-  src: url('../public/fonts/Noto_Serif/NotoSerif-VariableFont_wdth\,wght.ttf');
+  src: url('../public/fonts/Noto_Serif/NotoSerif-VariableFont_wdth\,wght.ttf') format('truetype');
 }
 
 body, h1 {

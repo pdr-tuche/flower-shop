@@ -4,13 +4,13 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../../../shared/components/header/header.component';
 
 @Component({
-  selector: 'app-about-us',
+  selector: 'app-home-section',
   standalone: true,
   imports: [RouterOutlet, CommonModule, HeaderComponent],
-  templateUrl: './about-us.component.html',
-  styleUrl: './about-us.component.scss',
+  templateUrl: './home-section.component.html',
+  styleUrl: './home-section.component.scss',
 })
-export class AboutUsComponent {
+export class HomeSectionComponent {
   title = 'Flower Shop';
   background = 'images/annie-spratt-home.png';
 }
