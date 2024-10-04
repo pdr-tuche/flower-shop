@@ -2,10 +2,47 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 1440px;
+  height: 940px;
+  h1 {
+    font-family: 'Yeseva One';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 55.44px;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 105px;
+  }
 }
 
 .products-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+.card {
+  width: 276.22px;
+  height: 419px;
+}
+
+.card-image {
+  width: 276.25px;
+  height: 323px;
+}
+
+.card-title {
+  font-family: 'Noto Serif';
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 43.58px;
+  text-align: center;
+}
+
+.card-price {
+  font-family: 'Roboto Regular';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23.44px;
+  text-align: center;
 }
