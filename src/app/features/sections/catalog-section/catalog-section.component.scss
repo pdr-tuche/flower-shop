@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 1440px;
-  height: 940px;
+  min-width: 1440px;
+  min-height: 940px;
   h1 {
     font-family: 'Yeseva One';
     font-weight: 400;
@@ -45,4 +45,5 @@
   font-size: 20px;
   line-height: 23.44px;
   text-align: center;
+  color: #6F6F6F;
 }

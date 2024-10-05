@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { ButtonComponent } from '../../../shared/components/button/button.component';
 
 @Component({
   selector: 'app-catalog-section',
   standalone: true,
-  imports: [],
+  imports: [ButtonComponent],
   templateUrl: './catalog-section.component.html',
   styleUrl: './catalog-section.component.scss',
 })
@@ -30,4 +31,6 @@ export class CatalogSectionComponent {
       image: 'images/Photo - 4.png',
     },
   ];
+
+  buttonName = 'More Info';
 }
