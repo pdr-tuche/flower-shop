@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  min-width: 1440px;
+  min-height: 1024;
+  background-color: #8F464A;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: 'Yeseva One', serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 55.44px;
+  text-align: center;
+  margin: 32px 32px;
+}

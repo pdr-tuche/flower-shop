@@ -4,6 +4,7 @@ import { HomeSectionComponent } from './features/sections/home-section/home-sect
 import { AboutUsSectionComponent } from './features/sections/about-us-section/about-us-section.component';
 import { ServicesSectionComponent } from './features/sections/services-section/services-section.component';
 import { CatalogSectionComponent } from './features/sections/catalog-section/catalog-section.component';
+import { ContactUsSectionComponent } from "./features/sections/contact-us-section/contact-us-section.component";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { CatalogSectionComponent } from './features/sections/catalog-section/cat
     AboutUsSectionComponent,
     ServicesSectionComponent,
     CatalogSectionComponent,
-  ],
+    ContactUsSectionComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

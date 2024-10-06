@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -9,8 +9,10 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
   @Input() name: string;
+  @Input() type: string;
 
   constructor() {
     this.name = 'Button';
+    this.type = 'button';
   }
 }
