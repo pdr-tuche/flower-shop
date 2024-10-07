@@ -33,4 +33,8 @@ export class CatalogSectionComponent {
   ];
 
   buttonName = 'More Info';
+
+  onButtonClick() {
+    alert('More info');
+  }
 }
