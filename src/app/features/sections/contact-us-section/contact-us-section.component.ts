@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, EventEmitter, input, Output } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
 import { MatFormFieldModule } from '@angular/material/form-field'
@@ -50,10 +50,11 @@ export class ContactUsSectionComponent {
 
   onSubmit() {
     if (this.form.invalid) {
+      alert('Preencha todos os campos corretamente!');
       return;
     }
 
-    console.log('Formulário enviado:', this.form.value);
+    this.form.reset();
     alert('Sua mensagem foi enviada com sucesso!');
   }
 }

@@ -13,11 +13,14 @@
           </mat-form-field>
           <mat-form-field>
             <mat-label>Message</mat-label>
-            <textarea matInput
+            <textarea 
+            formControlName="message"
+            matInput
             cdkTextareaAutosize
             #autosize="cdkTextareaAutosize"
             cdkAutosizeMinRows="1"
-            cdkAutosizeMaxRows="5"></textarea>
+            cdkAutosizeMaxRows="5"
+            required></textarea>
           </mat-form-field>
           <app-button [name]="buttonName" [type]="buttonType" buttonClass="secondary"></app-button>
         </div>
