@@ -10,6 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ButtonComponent {
   @Input() name: string;
   @Input() type: string;
+  @Input() buttonClass:string = 'primary';
 
   constructor() {
     this.name = 'Button';
