@@ -16,6 +16,10 @@ import { Observable } from 'rxjs';
 })
 export class DialogComponent {
   matDialogRef = inject(MatDialogRef);
+
+  goToLink(url: string){
+    window.open(url, "_blank");
+  }
 }
 
 @Injectable({

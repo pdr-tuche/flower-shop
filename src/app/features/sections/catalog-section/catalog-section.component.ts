@@ -38,6 +38,6 @@ export class CatalogSectionComponent {
   modal = inject(DialogService);
 
   onButtonClick() {
-    this.modal.openDialog()
+    this.modal.openDialog().subscribe((result) => console.log(result));
   }
 }
