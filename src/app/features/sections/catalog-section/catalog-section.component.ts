@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
+import { DialogService } from '../../../shared/services/modal-service.service';
 
 @Component({
   selector: 'app-catalog-section',
@@ -34,7 +35,9 @@ export class CatalogSectionComponent {
 
   buttonName = 'More Info';
 
+  modal = inject(DialogService);
+
   onButtonClick() {
-    alert('More info');
+    this.modal.openDialog()
   }
 }
