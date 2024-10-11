@@ -1,5 +1,6 @@
-<h2 mat-dialog-title>Design feito por Alessa Duarte</h2>
+<h2 mat-dialog-title>{{ data.title }}</h2>
 <mat-dialog-actions>
-  <button (click)="goToLink('https://www.behance.net/alessaduarte')" mat-button>Behance</button>
-  <button (click)="goToLink('https://www.linkedin.com/in/alessaduarte')" mat-button>Linkedin</button>
+  @for (btn of data.buttons; track $index) {
+    <button (click)="goToLink(btn.url)" mat-button>{{ btn.title }}</button>
+  }
 </mat-dialog-actions>

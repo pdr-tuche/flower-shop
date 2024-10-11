@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
-import { DialogService } from '../../../shared/services/modal-service.service';
+import { DialogService, ModalDialogData } from '../../../shared/services/modal-service.service';
 
 @Component({
   selector: 'app-catalog-section',
@@ -37,7 +37,22 @@ export class CatalogSectionComponent {
 
   modal = inject(DialogService);
 
+  dadosModal: ModalDialogData = {
+    title: 'Design feito por Alessa Duarte',
+    content: '',
+    buttons: [
+      {
+        title: 'Behance',
+        url: "https://www.behance.net/alessaduarte"
+      },
+      {
+        title: 'Linkedin',
+        url: "https://www.linkedin.com/in/alessaduarte"
+      },    
+    ],
+  };
+
   onButtonClick() {
-    this.modal.openDialog().subscribe((result) => console.log(result));
+    this.modal.openDialog(this.dadosModal);
   }
 }

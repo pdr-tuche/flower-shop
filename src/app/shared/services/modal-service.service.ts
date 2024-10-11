@@ -1,11 +1,22 @@
-import { Component, inject, Injectable } from '@angular/core';
+import { Component, inject, Injectable, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import {
+  MAT_DIALOG_DATA,
   MatDialog,
   MatDialogModule,
-  MatDialogRef,
 } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
+
+export interface ModalDialogButton {
+  title: string
+  url: string
+}
+
+export interface ModalDialogData {
+  title: string;
+  content: string;
+  buttons: ModalDialogButton[];
+}
 
 @Component({
   selector: 'app-dialog',
@@ -14,8 +25,8 @@ import { Observable } from 'rxjs';
   standalone: true,
   imports: [MatButtonModule, MatDialogModule],
 })
-export class DialogComponent {
-  matDialogRef = inject(MatDialogRef);
+export class DialogComponent {  
+  data: ModalDialogData = inject(MAT_DIALOG_DATA);
 
   goToLink(url: string){
     window.open(url, "_blank");
@@ -30,7 +41,7 @@ export class DialogService {
 
   constructor() {}
 
-  openDialog(): Observable<boolean> {
-    return this.matDialog.open(DialogComponent).afterClosed();
+  openDialog(data: ModalDialogData): Observable<boolean> {
+    return this.matDialog.open(DialogComponent, {data}).afterClosed();
   }
 }
