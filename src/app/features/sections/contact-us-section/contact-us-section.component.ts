@@ -1,9 +1,10 @@
-import { Component, EventEmitter, input, Output } from '@angular/core';
+import { Component, EventEmitter, inject, input, Output } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button'
+import { DialogService, ModalDialogData } from '../../../shared/services/modal-service.service';
 
 interface Contato {
   name: string
@@ -47,14 +48,37 @@ export class ContactUsSectionComponent {
     }),
   });
 
+  modal = inject(DialogService);
+
+  modalInvalidText: ModalDialogData = {
+    title: 'Erro',
+    content: 'Preencha todos os campos corretamente!',
+    buttons: [
+      {
+        title: 'OK',
+        url: '',
+      },
+    ],
+  }
+
+  modalSuccessText: ModalDialogData = {
+    title: 'Sucesso',
+    content: 'Mensagem enviada com sucesso!',
+    buttons: [
+      {
+        title: 'OK',
+        url: '',
+      },
+    ],
+  }
 
   onSubmit() {
     if (this.form.invalid) {
-      alert('Preencha todos os campos corretamente!');
+      this.modal.openDialog(this.modalInvalidText)
       return;
     }
 
     this.form.reset();
-    alert('Sua mensagem foi enviada com sucesso!');
+    this.modal.openDialog(this.modalSuccessText)
   }
 }

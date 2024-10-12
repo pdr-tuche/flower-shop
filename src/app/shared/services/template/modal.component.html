@@ -1,6 +1,14 @@
 <h2 mat-dialog-title>{{ data.title }}</h2>
+@if (data.content) {
+  <mat-dialog-content>
+    <p>{{ data.content }}</p>
+  </mat-dialog-content>
+}
 <mat-dialog-actions>
   @for (btn of data.buttons; track $index) {
-    <button (click)="goToLink(btn.url)" mat-button>{{ btn.title }}</button>
+    @if (btn.url) {
+      <button (click)="goToLink(btn.url)" mat-button>{{ btn.title }}</button>
+    }
   }
+  <button mat-button (click)="closeModal()">Fechar</button>
 </mat-dialog-actions>

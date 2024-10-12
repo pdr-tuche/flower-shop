@@ -4,6 +4,7 @@ import {
   MAT_DIALOG_DATA,
   MatDialog,
   MatDialogModule,
+  MatDialogRef,
 } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
 
@@ -27,10 +28,15 @@ export interface ModalDialogData {
 })
 export class DialogComponent {  
   data: ModalDialogData = inject(MAT_DIALOG_DATA);
+  matDialogRef = inject(MatDialogRef);
 
   goToLink(url: string){
     window.open(url, "_blank");
   }
+
+  closeModal() {
+    this.matDialogRef.close();
+  }  
 }
 
 @Injectable({
